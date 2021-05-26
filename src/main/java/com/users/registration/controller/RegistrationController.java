@@ -48,7 +48,7 @@ public class RegistrationController {
         return new ResponseEntity<ResponseDTO>( responseDTO , HttpStatus.OK);
     }
 	
-	@DeleteMapping("/delete{userID")
+	@DeleteMapping("/delete/{userID}")
 	public ResponseEntity<ResponseDTO> deleteUserData(@PathVariable("userID") int userID){
 		registrationService.deleteEmployeePayRollData(userID);
     	ResponseDTO responseDTO = new ResponseDTO("Deleted successfully ","Deleted id"+userID);
